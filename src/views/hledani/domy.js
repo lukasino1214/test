@@ -11,14 +11,14 @@ const container = {
 
 function Domy() {
   const [posts, setPosts] = useState([])
-  const [post, setPost] = useState({cena: "", pozemek: "", druh: "", text: "", lokace: "", dum:""})
-  const { cena, pozemek, druh, text, lokace, dum} = post
+  const [post, setPost] = useState({cena:"", rozloha:"", dum:"", druh:"", lokace:"", dispozice:"", text:""})
+  const { cena, rozloha, dum, druh, lokace, dispozice, text} = post
   useEffect(() => {
     fetchPosts()
   }, [])
 
   async function fetchPosts() {
-    const {data} = await supabase.from("domy").select().order('created_at', { ascending: false })
+    const {data} = await supabase.from("dum").select().order('created_at', { ascending: false })
     setPosts(data)
     console.log("data: ", data)
   }

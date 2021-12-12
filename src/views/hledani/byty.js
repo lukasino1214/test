@@ -18,7 +18,7 @@ function Byty() {
   }, [])
 
   async function fetchPosts() {
-    const {data} = await supabase.from("byty").select().order('created_at', { ascending: false })
+    const {data} = await supabase.from("byt").select().order('created_at', { ascending: false })
     setPosts(data)
     console.log("data: ", data)
   }

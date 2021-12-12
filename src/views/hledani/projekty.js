@@ -18,7 +18,7 @@ function Projekty() {
   }, [])
 
   async function fetchPosts() {
-    const {data} = await supabase.from("projekty").select().order('created_at', { ascending: false })
+    const {data} = await supabase.from("projekt").select().order('created_at', { ascending: false })
     setPosts(data)
     console.log("data: ", data)
   }

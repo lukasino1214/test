@@ -22,7 +22,7 @@ export function Post(props) {
             <div style={image}>
                 <h1>No image</h1>
             </div>
-            <h1>Prodej {post.druh} {numberWithSpaces(post.dum)} m², pozemek {numberWithSpaces(post.pozemek)} m²</h1>
+            <h1>Prodej {post.druh} {numberWithSpaces(post.dum)} m², pozemek {numberWithSpaces(post.rozloha)} m²</h1>
             <h3>{post.lokace}</h3>
             <h2>{numberWithSpaces(post.cena)} Kč</h2>
         </div>
